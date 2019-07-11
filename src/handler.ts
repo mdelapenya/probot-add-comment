@@ -10,6 +10,7 @@ export async function handle(
   const issueNumber = context.issue().number;
 
   for (const c of comments) {
+
     if (label.name === c.label) {
       if (labeled) {
         const commentId = await getCommentId(context, c.comment);
